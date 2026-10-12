@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mogibara Colour Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <a class="nav-btn" href="../shades/index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="17" r="2.5"/><circle cx="6" cy="17" r="2.5"/><circle cx="12" cy="12" r="2.5"/></svg>
+    Colour Shades
+  </a>
+  <a class="nav-btn" href="../picker/index.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+    Colour Picker
+  </a>
+</div>
+
+<header class="site-header">
+  <div class="brand">MOGIBARA</div>
+  <div class="site-title">Colour Library</div>
+</header>
+
+<div class="lib-toolbar">
+  <input class="lib-search" id="search" placeholder="Search name, #hex, rgb, cmyk, hsv or hsl…" autocomplete="off">
+</div>
+<div class="lib-hint" id="count"></div>
+
+<div class="color-grid" id="grid"></div>
+
+<div class="scroll-fab-group">
+  <button class="scroll-fab" id="toTop" title="Scroll to top">↑</button>
+  <button class="scroll-fab" id="toBottom" title="Scroll to bottom">↓</button>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal-card modal-wrap">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-swatch" id="modalSwatch"></div>
+    <div class="modal-title" id="modalTitle">—</div>
+
+    <div class="field-row"><label>HEX</label><input id="mHex" readonly>
+      <button class="icon-btn" data-mcopy="hex"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>RGB</label><input id="mRgb" readonly>
+      <button class="icon-btn" data-mcopy="rgb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>CMYK</label><input id="mCmyk" readonly>
+      <button class="icon-btn" data-mcopy="cmyk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>HSV</label><input id="mHsv" readonly>
+      <button class="icon-btn" data-mcopy="hsv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+    <div class="field-row" style="margin-top:10px"><label>HSL</label><input id="mHsl" readonly>
+      <button class="icon-btn" data-mcopy="hsl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg></button>
+    </div>
+
+    <a class="cta-card" id="mOpenPicker" style="margin-top:16px" href="#">
+      <div class="cta-ico">🎨</div>
+      <div class="cta-text"><b>Open in Picker</b><span>Fine-tune this colour with the SV box &amp; sliders</span></div>
+    </a>
+  </div>
+</div>
+
+<footer class="site-footer">© 2026 <b>MOGIBARA</b> — Colour Room</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
